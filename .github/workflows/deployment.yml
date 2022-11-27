@@ -1,5 +1,5 @@
 name: Test Project
-on: push
+on: [push, workflow_dispatch, release]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -32,5 +32,4 @@ jobs:
         run: |
           echo "Deploying ..."
           sleep 5s
-          echo "Deployed" 
-
+          echo "Deployed"
